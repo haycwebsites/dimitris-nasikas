@@ -222,7 +222,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 {...cp('footerConfig.creditLinkText')}
               >
-                {footerConfig.creditLinkText}
+                {t(footerConfig.creditLinkText)}
               </a>
             </p>
           </div>

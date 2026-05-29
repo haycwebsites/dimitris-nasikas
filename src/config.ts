@@ -26,6 +26,7 @@ export interface SiteConfig {
   canonical: string;
   siteId: string;
   apiUrl: string;
+  backToTopLabel: LocaleString;
 }
 
 export interface DigitalProduct {
@@ -73,6 +74,8 @@ export interface NavigationConfig {
   logo: string;
   logoAlt: LocaleString;
   phone: string;
+  menuOpenLabel: LocaleString;
+  menuCloseLabel: LocaleString;
   links: NavigationLink[];
 }
 
@@ -101,7 +104,7 @@ export interface FooterConfig {
   doctorName: LocaleString;
   doctorRole: LocaleString;
   copyrightText: LocaleString;
-  creditLinkText: string;
+  creditLinkText: LocaleString;
   creditLinkHref: string;
 }
 
@@ -136,7 +139,7 @@ export interface AboutConfig {
   shapeImage: string;
   photo: string;
   photoAlt: LocaleString;
-  experienceYear: string;
+  experienceYear: LocaleString;
   experienceText: LocaleString;
   subtitle: LocaleString;
   title: LocaleString;
@@ -151,6 +154,7 @@ export interface AboutConfig {
 export interface ServicesConfig {
   backgroundImage: string;
   iconImage: string;
+  iconAlt: LocaleString;
   mainTitle: LocaleString;
   description: LocaleString;
   secondaryTitle: LocaleString;
@@ -163,6 +167,7 @@ export interface ServicesConfig {
 export interface BiographyConfig {
   subtitle: LocaleString;
   title: LocaleString;
+  titleLine2: LocaleString;
   description: LocaleString;
   ctaText: LocaleString;
   ctaHref: string;
@@ -222,6 +227,7 @@ export const siteConfig: SiteConfig = {
   canonical: 'https://dimitrisnasikas.com',
   siteId: '',
   apiUrl: 'https://hayc.gr',
+  backToTopLabel: { el: 'Επιστροφή στην κορυφή', en: 'Back to top' },
 };
 
 export const digitalProductsConfig: DigitalProductsConfig = {
@@ -266,6 +272,8 @@ export const navigationConfig: NavigationConfig = {
     en: 'Dr. Dimitris Nasikas',
   },
   phone: '+30 6987672604',
+  menuOpenLabel: { el: 'Άνοιγμα μενού', en: 'Open menu' },
+  menuCloseLabel: { el: 'Κλείσιμο μενού', en: 'Close menu' },
   links: [
     { label: { el: 'Αρχική', en: 'Home' }, href: '#home' },
     { label: { el: 'Σχετικά', en: 'About' }, href: '#about' },
@@ -348,7 +356,7 @@ export const footerConfig: FooterConfig = {
     el: '©2026, Όλα τα δικαιώματα διατηρούνται. Με αγάπη 💙 από',
     en: '©2026, All rights reserved. Made with love 💙 by',
   },
-  creditLinkText: 'hayc.gr',
+  creditLinkText: { el: 'hayc.gr', en: 'hayc.gr' },
   creditLinkHref: 'http://hayc.gr',
 };
 
@@ -372,7 +380,7 @@ export const aboutConfig: AboutConfig = {
   shapeImage: '',
   photo: '/images/about-photo.jpg',
   photoAlt: { el: 'Δρ. Δημήτριος Νασίκας', en: 'Dr. Dimitris Nasikas' },
-  experienceYear: '2021',
+  experienceYear: { el: '2021', en: '2021' },
   experienceText: { el: 'Διδακτορικό, Πανεπιστήμιο Κρήτης', en: 'PhD, University of Crete' },
   subtitle: { el: 'Σχετικά με τον χειρουργό', en: 'About the surgeon' },
   title: { el: 'Δρ. Δημήτριος Νασίκας', en: 'Dr. Dimitris Nasikas' },
@@ -419,6 +427,7 @@ export const aboutConfig: AboutConfig = {
 export const servicesConfig: ServicesConfig = {
   backgroundImage: '/images/service-bg.png',
   iconImage: '/images/medicle.png',
+  iconAlt: { el: 'Υγεία', en: 'Health' },
   mainTitle: { el: 'Φροντίδα Μαστού', en: 'Breast Care' },
   description: {
     el: 'Ολοκληρωμένη αξιολόγηση και διαχείριση της υγείας του μαστού — από τον προληπτικό έλεγχο και τη γενετική συμβουλευτική έως τη θεραπεία καλοήθων παθήσεων και του καρκίνου του μαστού.',
@@ -490,7 +499,8 @@ export const servicesConfig: ServicesConfig = {
 
 export const biographyConfig: BiographyConfig = {
   subtitle: { el: 'Βιογραφικό', en: 'Biography' },
-  title: { el: 'Επαγγελματικό Προφίλ', en: 'Professional Profile' },
+  title: { el: 'Επαγγελματικό', en: 'Professional' },
+  titleLine2: { el: 'Προφίλ', en: 'Profile' },
   description: {
     el: 'Εξερευνήστε την εκπαίδευση, την κατάρτιση, την έρευνα και την κλινική εμπειρία του Δρ. Νασίκα. Ανοίξτε κάθε ενότητα παρακάτω για πλήρεις λεπτομέρειες.',
     en: 'Explore Dr. Nasikas\'s education, training, research, and clinical experience. Open each section below for full details.',
@@ -624,7 +634,7 @@ export const contactPageConfig: ContactPageConfig = {
   nameLabel: { el: 'Όνομα', en: 'Name' },
   emailLabel: { el: 'Email', en: 'Email' },
   subjectLabel: { el: 'Θέμα', en: 'Subject' },
-  messageLabel: { el: 'Μήνυμα', en: 'Message' },
+  messageLabel: { el: 'Μήνυμα (προαιρετικό)', en: 'Message (optional)' },
   submitButton: { el: 'Αποστολή', en: 'Send' },
   submitting: { el: 'Αποστολή...', en: 'Sending...' },
   successTitle: { el: 'Το μήνυμά σας στάλθηκε!', en: 'Message sent!' },

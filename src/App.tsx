@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate }
   from 'react-router-dom';
 import { HaycProvider } from './hayc/config-context';
 import ScrollToTop from './components/ScrollToTop';
+import SiteMeta from './components/SiteMeta';
 import IndexPage from './pages/IndexPage';
 // HAYC Pipeline: Additional page imports are added
 // here automatically during project creation.
@@ -9,6 +10,7 @@ import IndexPage from './pages/IndexPage';
 function App() {
   return (
     <HaycProvider>
+      <SiteMeta />
       <BrowserRouter>
         <ScrollToTop />
         <Routes>

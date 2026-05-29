@@ -24,7 +24,7 @@ export default function AboutSection() {
                 />
               </div>
               <div className="about-experience">
-                <h2 {...cp('aboutConfig.experienceYear')}>{aboutConfig.experienceYear}</h2>
+                <h2 {...cp('aboutConfig.experienceYear')}>{t(aboutConfig.experienceYear)}</h2>
                 <p {...cp('aboutConfig.experienceText')}>{t(aboutConfig.experienceText)}</p>
               </div>
             </div>

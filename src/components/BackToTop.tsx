@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
+import { useHayc } from '../hayc/config-context';
 
 export default function BackToTop() {
+  const { t, config, cp } = useHayc();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -14,7 +16,8 @@ export default function BackToTop() {
       className={`backtotop-wrap cursor-pointer${visible ? ' active-progress' : ''}`}
       role="button"
       tabIndex={0}
-      aria-label="Back to top"
+      aria-label={t(config.siteConfig.backToTopLabel)}
+      {...cp('siteConfig.backToTopLabel')}
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {

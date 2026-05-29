@@ -21,7 +21,11 @@ export default function ServicesSection() {
                 </h2>
                 <div className="health-icon-2 d-none d-md-block">
                   <span>
-                    <img src={img(servicesConfig.iconImage)} alt="" />
+                    <img
+                      src={img(servicesConfig.iconImage)}
+                      alt={t(servicesConfig.iconAlt)}
+                      {...cp('servicesConfig.iconAlt')}
+                    />
                   </span>
                 </div>
               </div>

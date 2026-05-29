@@ -114,7 +114,7 @@ export default function Navbar() {
                     type="button"
                     className="bar-icon"
                     aria-expanded={menuOpen}
-                    aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+                    aria-label={menuOpen ? t(navigationConfig.menuCloseLabel) : t(navigationConfig.menuOpenLabel)}
                     onClick={() => setMenuOpen((open) => !open)}
                   >
                     <span />

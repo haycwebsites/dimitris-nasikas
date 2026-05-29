@@ -15,9 +15,10 @@ export default function BiographySection() {
                 <span className="section-subtitle-2 mb-25" {...cp('biographyConfig.subtitle')}>
                   {t(biographyConfig.subtitle)}
                 </span>
-                <h2 className="section-title" {...cp('biographyConfig.title')}>
-                  {t(biographyConfig.title)}
+                <h2 className="section-title">
+                  <span {...cp('biographyConfig.title')}>{t(biographyConfig.title)}</span>
                   <br />
+                  <span {...cp('biographyConfig.titleLine2')}>{t(biographyConfig.titleLine2)}</span>
                 </h2>
               </div>
               <p {...cp('biographyConfig.description')}>{t(biographyConfig.description)}</p>
