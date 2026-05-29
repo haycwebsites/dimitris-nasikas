@@ -225,7 +225,7 @@ export const siteConfig: SiteConfig = {
   },
   ogImage: '/images/logo.png',
   canonical: 'https://dimitrisnasikas.com',
-  siteId: '',
+  siteId: 'dimitris-nasikas',
   apiUrl: 'https://hayc.gr',
   backToTopLabel: { el: 'Επιστροφή στην κορυφή', en: 'Back to top' },
 };
