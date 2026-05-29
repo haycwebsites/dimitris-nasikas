@@ -1,10 +1,36 @@
-import { siteConfig, digitalProductsConfig, type DigitalProductsConfig } from '../config';
+import {
+  siteConfig,
+  digitalProductsConfig,
+  contactFormConfig,
+  newsletterFormConfig,
+  navigationConfig,
+  footerConfig,
+  heroConfig,
+  aboutConfig,
+  servicesConfig,
+  biographyConfig,
+  hospitalConfig,
+  consultationConfig,
+  contactPageConfig,
+  type DigitalProductsConfig,
+} from '../config';
 
 export interface RemoteConfig {
   version: number;
   exportedAt: string;
   siteConfig: typeof siteConfig;
   digitalProductsConfig?: DigitalProductsConfig;
+  contactFormConfig: typeof contactFormConfig;
+  newsletterFormConfig: typeof newsletterFormConfig;
+  navigationConfig: typeof navigationConfig;
+  footerConfig: typeof footerConfig;
+  heroConfig: typeof heroConfig;
+  aboutConfig: typeof aboutConfig;
+  servicesConfig: typeof servicesConfig;
+  biographyConfig: typeof biographyConfig;
+  hospitalConfig: typeof hospitalConfig;
+  consultationConfig: typeof consultationConfig;
+  contactPageConfig: typeof contactPageConfig;
 }
 
 export const defaultConfig: RemoteConfig = {
@@ -12,6 +38,17 @@ export const defaultConfig: RemoteConfig = {
   exportedAt: '',
   siteConfig,
   digitalProductsConfig,
+  contactFormConfig,
+  newsletterFormConfig,
+  navigationConfig,
+  footerConfig,
+  heroConfig,
+  aboutConfig,
+  servicesConfig,
+  biographyConfig,
+  hospitalConfig,
+  consultationConfig,
+  contactPageConfig,
 };
 
 export async function fetchRemoteConfig(): Promise<RemoteConfig> {
